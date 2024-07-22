@@ -3,7 +3,10 @@ import java.util.Map;
 
 public class RomanToInt {
     public static void main(String[] args) {
-        
+        String s = new String();
+        s="MCMXCIV";
+        int answer = romanToInt(s);
+        System.out.println(answer);
 
     }
     public static int romanToInt(String s) {
@@ -20,16 +23,14 @@ public class RomanToInt {
         int sum = 0;
 
         for(int i=0;i<s.length()-1;i++){
-            if(hm.get(sChar[i+1]<=hm.get(sChar[i]))){
+            if(hm.get(sChar[i+1])<=hm.get(sChar[i])){
                 sum += hm.get(sChar[i]);
             }
             else{
-                sum = sum + hm.get(sChar[i+1])-hm.get(sChar[i]);
-                i++;
+                sum = sum - hm.get(sChar[i]);
             }
         }
-
-
+        return  sum + hm.get(sChar[s.length() - 1]);
 
     }
 }
