@@ -14,9 +14,10 @@ public class ValidParenthesis {
             if (hm.containsKey(current)) {
                 st.add(current);
             } else {
-                if (st.isEmpty() || current != hm.get(st.pop())) {
+                if (st.isEmpty() || current != hm.get(st.peek())) {
                     return false;
                 }
+                st.pop();
             }
             i++;
         }
