@@ -26,6 +26,7 @@ public class RotateListt {
     }
 
     public static ListNode rotateRight(ListNode head, int k) {
+        if (head == null) return null;
         ListNode dummy = new ListNode(0, head);
         ListNode curr = dummy.next;
         int length = 0;
