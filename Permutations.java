@@ -6,7 +6,7 @@ public class Permutations {
         return result;
     }
 
-    private static void backtrack(int[] nums, List<Integer> tempList, List<List<Integer>> result) {
+    public static void backtrack(int[] nums, List<Integer> tempList, List<List<Integer>> result) {
         if (tempList.size() == nums.length) {
             result.add(new ArrayList<>(tempList));
         } else {

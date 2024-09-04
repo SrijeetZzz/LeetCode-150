@@ -7,7 +7,7 @@ public class Combinations {
         return result;
     }
 
-    private static void backtrack(int n, int k, int start, List<Integer> current, List<List<Integer>> result) {
+    public static void backtrack(int n, int k, int start, List<Integer> current, List<List<Integer>> result) {
         if (current.size() == k) {
             result.add(new ArrayList<>(current));
             return;
