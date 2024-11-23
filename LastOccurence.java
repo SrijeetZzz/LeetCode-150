@@ -1,18 +1,13 @@
 public class LastOccurence {
     public static int lengthOfLastWord(String s) {
-        int length=0;
-        int i=s.length()-1;
-
-        while(i>=0 && s.charAt(i)==' ')
-        {
-            i--;
+        String[] words = s.trim().split(" ");
+        if(words.length>0){
+            int st = words[words.length-1].length();
+            return st;
         }
-        while(i>=0 && s.charAt(i)!=' ')
-        {
-            length++;
-            i--;
-        }
-        return length;
+        else return 0;
+        
+        
         
     }public static void main(String[] args) {
         int ans = lengthOfLastWord("   fly me   to   the moon  ");
