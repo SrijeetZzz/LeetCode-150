@@ -28,5 +28,5 @@ public class PalindromePartition {
             }
         }
         return true;
-}
+    }
 }
